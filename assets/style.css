@@ -1,12 +1,13 @@
 *{
     box-sizing: border-box;
+    background-color: rgb(230, 226, 240);
 }
 main{ 
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px 0px;
-    
+
 }
 
 body{
