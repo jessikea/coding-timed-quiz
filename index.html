@@ -6,49 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <!-- CSS link -->
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="HTML" href="assets/highscore.html">
 </head>
 
 <body>
-<script src="/assets/script.js"></script>
-    <header>
-        <nav>
-        <!-- highscore section -->
-        <a> View Highscores</a>
-            <section> Time Remaining: </section>
-        </nav>
-    </header>    
+<script src="assets/script.js"></script>
+        <!-- highscore section linked Highscore HTML-->
+        <a id ="highscore" href="assets/highscore.html"> View Highscores</a>
+            <div id="timer"> Time Remaining: 0</div>
 
 <main>
     <!-- Quiz section -->
-    <section id="start-quiz">
+    <section id="start-quiz" class="quiz">
         <h1> Coding Quiz Challenge! </h1>
-            <p class="card">Try to answer as many code-related questions within the time limit </p>
+            <p>Try to answer as many code-related questions within the time limit. Each incorrect answer will reduce time by 10 seconds. Final score will be time remaining.
+            </p>
     </section>
-    <section>
-        <p> Time:</p>
-        <h1> Question</h1>
-            <ul> Choices</ul>
-    </section>
-    <section>
-        <h1> Quiz Completed!</h1>
-            <p> You Scored: </p>
-            <label> Enter Initials: </label>
-            <button> Sumbit </button>
-        </section>
-
 </main>
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
