@@ -6,13 +6,29 @@ main{
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px 0px;
+    
 }
 
 body{
     font-family:'Courier New', Courier, monospace;
 }
+.container{
+    text-align: center;
+    height:auto;
+    width:auto;
+}
+
+#start-quiz{
+margin-top: 70px;
+color:rgb(195, 139, 248)
+}
+
+#start-quiz p{
+    color: rgb(91, 61, 161)
+}
+
 #highscore{
-    color:palevioletred;
+    color:rgb(207, 63, 195);
     position: absolute;
     left:0;
     top: 15px;
@@ -22,6 +38,15 @@ body{
     position: absolute;
     top:15px;
     right: 0;
-    padding: 15px, 0px;
-    margin-right: 40px;
+    margin-right: 30px;
+}
+#start-button{
+    
+    background-color: rgb(183, 144, 219);
+    height:60px;
+    width: 120px;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    border-radius: 10px;
+    border-color: rgb(168, 117, 166);
 }
