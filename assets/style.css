@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
     background-color: rgb(230, 226, 240);
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(91, 61, 161);
 }
 main{ 
     display: flex;
@@ -10,30 +12,27 @@ main{
 
 }
 
-body{
-    font-family:'Courier New', Courier, monospace;
-}
-.container{
-    text-align: center;
-    height:auto;
-    width:auto;
-}
-
-#start-quiz{
+.quiz{
 margin-top: 70px;
-color:rgb(195, 139, 248)
+width: 80%;
+text-align: center;
+margin-top: 50px;
+margin: 50px auto;
 }
 
-#start-quiz p{
-    color: rgb(91, 61, 161)
-}
 
-#highscore{
-    color:rgb(207, 63, 195);
+
+.view-high-score{
     position: absolute;
     left:0;
     top: 15px;
-    padding-left: 30px;
+    background-color: floralwhite;
+    border-radius: 3px;
+    border-color: rgb(168,117,166);
+    color: rgb(183, 144, 219);
+    padding: 5px;
+    font-size: 16px;
+    
 }
 #timer{
     position: absolute;
@@ -41,13 +40,75 @@ color:rgb(195, 139, 248)
     right: 0;
     margin-right: 30px;
 }
-#start-button{
+.submit-btn,
+.go-back,
+.clear-score,
+#startButton{
     
     background-color: rgb(183, 144, 219);
     height:60px;
-    width: 120px;
-    color: rgb(0, 0, 0);
+    width: auto;
     font-size: large;
     border-radius: 10px;
-    border-color: rgb(168, 117, 166);
+    justify-content: center;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 5px 10px;
+}
+#question-btns {
+    display: block;
+    background-color:rgb(183, 144, 219);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px auto;
+    width: 50%;
+}
+
+#startButton:hover,
+.submit-btn:hover,
+.go-back:hover,
+.clear-score:hover,
+#question-btns:hover {
+    background-color:blueviolet;
+    opacity: 70%;
+}
+
+#main-p {
+    font-size: 18px;
+}
+
+.question-list {
+    width: 50%;
+    margin: 10px auto;
+    list-style-type: decimal;
+    font-size: 18px;
+    list-style-position: inside;
+}
+
+
+.user-answer {
+    color: rgb(168,117,166);
+    border-top: 2px solid lightgrey;
+    font-size: 16px;
+    padding: 10px 16px;
+    margin: 10px auto; 
+}
+
+.initials {
+    display: block;
+    margin: 10px auto;
+    width: 50%;
+    padding: 5px;
+}
+
+.score-list,
+.score-list::marker {
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
 }
