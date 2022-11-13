@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
-    <!-- CSS link -->
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="HTML" href="assets/highscore.html">
-</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timed Code Quiz</title>
+<link  rel="stylesheet" href="assets/style.css">
+<!-- REMOVED html link -->
 
 <body>
-<script src="assets/script.js"></script>
-<!-- highscore section linked Highscore HTML-->
-    <a id ="highscore" href="assets/highscore.html"> View Highscores</a>
-<!--Timer-->
-    <div class="container">
-        <div id="timer"> Time Remaining: 0</div>
- <!-- Quiz section -->
-        <div id="start-quiz" class="quiz">
-        <h1> Coding Quiz Challenge! </h1>
-            <p>Try to answer as many code-related questions within the time limit. Each incorrect answer will reduce time by 10 seconds. Final score will be time remaining.
-            </p>
-        </div>
-    </div>
-    <button id="start-button"> Start Quiz</button>
-    </section>
-</main>
+    <header class="header">
+        <button class="view-high-score">View High Scores</button>
+        <!-- timer starts at 75 and counts down to 0 -->
+        <div id="timer">Time: 0</div>
+    </header>
+    <main class="quiz">
+        <h1 id="title">Coding Quiz Challenge!</h1>
+        <p id="main-p">Try to answer as many code-related questions within the time limit. Each incorrect answer will reduce time by 10 seconds. Final score will be time remaining.</p>
+        <button id="startButton">Start Quiz</button>
 
+        <!-- High score page no longer a link but is added using Java -->
+    </main>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>
