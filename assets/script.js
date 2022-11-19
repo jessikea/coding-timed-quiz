@@ -19,7 +19,7 @@ incorrectAns.className = "user-answer";
 incorrectAns.textContent = "Incorrect! 10 seconds removed from time!";
 
 
-
+// timer function that starts when starting
 var timeLeft = 0; 
 timerEl.textContent = "Time: " + timeLeft;
 var startGame = function () {
@@ -162,6 +162,31 @@ var newQuestion = function (event) {
   }
 };
 
+// clears time interval and sets timeLeft equal to a score and Time Left interval is cleared.
+function Done() {
+  
+  if (timeLeft >= 0) {
+       var finalScores = timeLeft;
+  
+  // if time runs out, score is equal to 0
+  } else {
+    finalScores = timeLeft
+    timerEl.textContent = "Time: " + finalScores;
+  }
+  // stops timer from counting more after last question is answered
+  clearInterval(timeInt)
+  
+  questionHead.textContent = "All Done!";
+  questionDiv.textContent = "Your final score is " + finalScores;
+  questionDiv.appendChild(scoreForm);
+  // submits initials and score into local storage
+  document.addEventListener("submit", function (event) {
+    event.preventDefault();
+    localStorage.setItem(initials.value, finalScores);
+    highScore();
+  });
+}
+
 
 // vars for changing to highscore page
 var questionHead = document.createElement("h1"); 
@@ -190,34 +215,8 @@ var clearScoreBtn = document.createElement("button");
 clearScoreBtn.className = "clear-score";
 clearScoreBtn.textContent = "Clear Highscores";
 
-
-// clears time interval and sets timeLeft equal to a score and Time Left interval is cleared.
-function Done() {
-  
-  if (timeLeft >= 0) {
-        var finalScores = timeLeft;
-        clearInterval(timerEl);
-  // if time runs out, score is equal to 0
-  } else {
-    timeLeft = 0;
-    finalScores = timeLeft
-    timerEl.textContent = "Time: " + finalScores;
-  }
-  questionHead.textContent = "All Done!";
-  questionDiv.textContent = "Your final score is " + finalScores;
-  questionDiv.appendChild(scoreForm);
-  document.addEventListener("submit", function (event) {
-    event.preventDefault();
-    localStorage.setItem(initials.value, finalScores);
-    highScore();
-  });
-}
-
-
+// removes all text not related to highscore and creates the highscore page using local storage
 var highScore = function () {
-  try {
-    clearInterval(timeInt);
-  } catch {}
   headerEl.remove(); 
   title.remove(); 
   mainP.remove(); 
@@ -253,10 +252,11 @@ var highScore = function () {
   clearScoreBtn.addEventListener("click", clearScore);
 };
 
+// goes back to quiz to start again
 var goBack = function () {
   window.location.reload();
 };
-
+// ckears score board and alerts user of this action
 var clearScore = function () {
   localStorage.clear();
   alert("High Scores cleared");
