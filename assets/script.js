@@ -196,7 +196,8 @@ function Done() {
   
   if (timeLeft >= 0) {
         var finalScores = timeLeft;
-        // clearInterval(timeLeft);
+        clearInterval(timerEl);
+  // if time runs out, score is equal to 0
   } else {
     timeLeft = 0;
     finalScores = timeLeft
