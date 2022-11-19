@@ -112,7 +112,7 @@ var QNA = [
 ];
 
 
-//makes each choice a button to click
+//makes each choice a button to click numbered from one to four choices
 var questionBtnOne = document.createElement("button"); 
 questionBtnOne.className = "question-btn-one";
 questionBtnOne.id = "question-btns";
@@ -196,7 +196,7 @@ function Done() {
   
   if (timeLeft >= 0) {
         var finalScores = timeLeft;
-        clearInterval(timeLeft);
+        // clearInterval(timeLeft);
   } else {
     timeLeft = 0;
     finalScores = timeLeft
